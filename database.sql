@@ -1,31 +1,23 @@
--- ──BASE DE DATOS ───────────────────────────────────
- 
-CREATE DATABASE IF NOT EXISTS portfolio_studio
-    CHARACTER SET utf8mb4
-    COLLATE utf8mb4_unicode_ci;
- 
-USE portfolio_studio;
- 
- 
--- ──TABLAS ──────────────────────────────────────────
+// esto luego de crear nuestra base de datos
  
 CREATE TABLE IF NOT EXISTS coleccion (
-    id          INT AUTO_INCREMENT PRIMARY KEY,
-    titulo      VARCHAR(150) NOT NULL,
-    categoria   VARCHAR(80)  NOT NULL DEFAULT 'General',
-    imagen_url  VARCHAR(500) DEFAULT NULL,
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(150) NOT NULL,
+    categoria VARCHAR(80) NOT NULL DEFAULT 'General',
+    imagen_url VARCHAR(500) DEFAULT NULL,
     descripcion TEXT,
-    fuente      VARCHAR(150) DEFAULT 'Pinterest',
-    destacado   TINYINT(1)   NOT NULL DEFAULT 0,
-    creado_en   DATETIME     DEFAULT CURRENT_TIMESTAMP
+    fuente VARCHAR(150) DEFAULT 'Pinterest',
+    destacado TINYINT(1) NOT NULL DEFAULT 0,
+    creado_en DATETIME DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
- 
+
+
 CREATE TABLE IF NOT EXISTS mensajes (
-    id       INT AUTO_INCREMENT PRIMARY KEY,
-    nombre   VARCHAR(100) NOT NULL,
-    correo   VARCHAR(150) NOT NULL,
-    mensaje  TEXT         NOT NULL,
-    fecha    DATETIME     DEFAULT CURRENT_TIMESTAMP
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    correo VARCHAR(150) NOT NULL,
+    mensaje TEXT NOT NULL,
+    fecha DATETIME DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
  
  
