@@ -1,4 +1,4 @@
-// esto luego de crear nuestra base de datos
+---esto luego de crear nuestra base de datos
  
 CREATE TABLE IF NOT EXISTS coleccion (
     id INT AUTO_INCREMENT PRIMARY KEY,
